@@ -1,0 +1,25 @@
+#######################################
+# Syntax Coloring Tapatio Sensor Bar
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+TapatioSensorBar	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+calibrate	KEYWORD2
+getPosition	KEYWORD2
+readRaw		KEYWORD2
+readDigitalRaw	KEYWORD2
+readSingleSensor	KEYWORD2
+getUmbral	KEYWORD2
+getValues	KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
