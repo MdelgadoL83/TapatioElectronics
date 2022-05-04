@@ -1,4 +1,4 @@
-# Servo library
+# TapatioElectronics library
 
 
 This library allows an Arduino board to control RC (hobby) servo motors. Servos have integrated gears and a shaft that can be precisely controlled. Standard servos allow the shaft to be positioned at various angles, usually between 0 and 180 degrees. Continuous rotation servos allow the rotation of the shaft to be set to various speeds.
@@ -8,7 +8,7 @@ The Servo library supports up to 12 motors on most Arduino boards and 48 on the 
 To use this library:
 
 ```
-#include <Servo.h>
+#include <SensorBar16.h>
 ```
 
 ## Circuit
