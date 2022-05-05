@@ -24,7 +24,7 @@
 */
 
 
-#include "SensorBar16.h"
+#include "TapatioElectronics.h"
 
 int sensors=16;
                                   //Create object to operate the SensorBar16

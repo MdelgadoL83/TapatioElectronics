@@ -1,4 +1,4 @@
-#include "SensorBar16.h"
+#include "TapatioElectronics.h"
 #include "Arduino.h"
 
 /**
@@ -6,7 +6,7 @@
 -------------------------------------------CONSTRUCTOR-------------------------------------------
 -------------------------------------------------------------------------------------------------
 */
-TapatioSensorBar::TapatioSensorBar(int s0, int s1, int s2, int s3, int out){
+SensorBar16::SensorBar16(int s0, int s1, int s2, int s3, int out){
   this->s0=s0;
   this->s1=s1;
   this->s2=s2;
@@ -23,7 +23,7 @@ TapatioSensorBar::TapatioSensorBar(int s0, int s1, int s2, int s3, int out){
 -------------------------------------------PRIVATES----------------------------------------------
 -------------------------------------------------------------------------------------------------
 */
-int TapatioSensorBar::read(int x){
+int SensorBar16::read(int x){
   digitalWrite(s0,bitRead(x,0));
   digitalWrite(s1,bitRead(x,1));
   digitalWrite(s2,bitRead(x,2));
@@ -36,7 +36,7 @@ int TapatioSensorBar::read(int x){
 -------------------------------------------PUBLICS-----------------------------------------------
 -------------------------------------------------------------------------------------------------
 */
-int TapatioSensorBar::singleSensorRead(int sensor){
+int SensorBar16::singleSensorRead(int sensor){
   if(sensor>=0&&sensor<numSensors){
     return read(sensor);
   } else{
@@ -45,12 +45,12 @@ int TapatioSensorBar::singleSensorRead(int sensor){
   
 }
 
-int TapatioSensorBar::getPosition(int range){
+int SensorBar16::getPosition(int range){
   int p=getPosition();
   return map(p,100,1600,range*-1,range);
 }
 
-int TapatioSensorBar::getPosition(){
+int SensorBar16::getPosition(){
   int suma=0;
   int contador=0;
   for(int x=0;x<numSensors;x++){
@@ -64,14 +64,14 @@ int TapatioSensorBar::getPosition(){
  return lastPosition;
 }
 
-int* TapatioSensorBar::analogValues(){
+int* SensorBar16::analogValues(){
   for(int x=0;x<numSensors;x++){
     data[x]=read(x);
   }
   return data;
 }
 
-int* TapatioSensorBar::digitalValues(){
+int* SensorBar16::digitalValues(){
   for(int x=0;x<numSensors;x++){
     if(read(x)>umbral[x]){
      data[x]=(x+1)*100;
@@ -82,18 +82,18 @@ int* TapatioSensorBar::digitalValues(){
 return data;
 }
 
-int* TapatioSensorBar::getUmbral(){
+int* SensorBar16::getUmbral(){
   return umbral;
 }
 
-int* TapatioSensorBar::getValues(){
+int* SensorBar16::getValues(){
   return data;
 }
 
-void TapatioSensorBar::calibrate(){
+void SensorBar16::calibrate(int times){
   int min[]={5000,5000,5000,5000,5000,5000,5000,5000,5000,5000,5000,5000,5000,5000,5000,5000};
   int max[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-  for(int y=0;y<800;y++){
+  for(int y=0;y<times;y++){
     for(int x=0;x<numSensors;x++){
       int v=read(x);
       if(min[x]>v){
