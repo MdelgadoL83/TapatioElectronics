@@ -1,21 +1,31 @@
 # TapatioElectronics library
 
 
-This library allows an Arduino board to control RC (hobby) servo motors. Servos have integrated gears and a shaft that can be precisely controlled. Standard servos allow the shaft to be positioned at various angles, usually between 0 and 180 degrees. Continuous rotation servos allow the rotation of the shaft to be set to various speeds.
+This library contains all the necessary elements to make all the sensor boards designed and developed by Tejuino Electronics work, the operation of each of them is shown below.
 
-The Servo library supports up to 12 motors on most Arduino boards and 48 on the Arduino Mega. On boards other than the Mega, use of the library disables `analogWrite()` (PWM) functionality on pins 9 and 10, whether or not there is a Servo on those pins. On the Mega, up to 12 servos can be used without interfering with PWM functionality; use of 12 to 23 motors will disable PWM on pins 11 and 12. 
-
-To use this library:
+Remember to use this library:
 
 ```
-#include <SensorBar16.h>
+#include <TapatioElecronics.h>
 ```
 
-## Circuit
+## SensorBar16
 
-Servo motors have three wires: power, ground, and signal. The power wire is typically red, and should be connected to the 5V pin on the Arduino board. The ground wire is typically black or brown and should be connected to a ground pin on the Arduino board. The signal pin is typically yellow, orange or white and should be connected to a digital pin on the Arduino board. Note that servos draw considerable power, so if you need to drive more than one or two, you'll probably need to power them from a separate supply (i.e. not the 5V pin on your Arduino). Be sure to connect the grounds of the Arduino and external power supply together.
+This card has 16 infrared sensors dedicated to distinguishing a line with high contrast (black/white), usually used in line following robots.
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                       TOP VIEW                                                        ║
+║                                        ███    ███    ███    ███    ███    ███                                         ║
+║                                 ███     5      6      7      8      9      10    ███                                  ║
+║                          ███     4                                                11    ███                           ║
+║                   ███     3                                                              12    ███                    ║
+║            ███     2                                                                            13    ███             ║
+║     ███     1                              S2 ───────┐       ┌─────── VCC                              14    ███      ║
+║      0                                     S3 ─────┐ │       │ ┌───── GND                                     15      ║
+╚═══════════════════════════════════════════════════ █ █ █ █ █ █ █ ═════════════════════════════════════════════════════╝
+S1 ─────────┘  │ └───────── OUT
+S0
 
-## Examples
+### Examples for SensorBar16
 
 * [Knob](https://www.arduino.cc/en/Tutorial/Knob): control the shaft of a servo motor by turning a potentiometer
 * [Sweep](https://www.arduino.cc/en/Tutorial/LibraryExamples/Sweep): sweeps the shaft of a servo motor back and forth
