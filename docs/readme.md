@@ -12,20 +12,23 @@ Remember to use this library:
 ## SensorBar16
 
 This card has 16 infrared sensors dedicated to distinguishing a line with high contrast (black/white), usually used in line following robots.
-╔═══════════════════════════════════════════════════════════════════════════════════════╗
-║---------------------------------------------------------------------TOP-VIEW---------------------------------------------------------║
-║-------------------------------------------███----███----███----███----███----███---------------------------------║
-║------------------------------------███-----5-------6---------7----------8---------9--------10----███-------------------------║
-║                          ███     4                                                11    ███                           ║
-║                   ███     3                                                              12    ███                    ║
-║            ███     2                                                                            13    ███             ║
-║     ███     1                              S2 ───────┐       ┌─────── VCC                              14    ███      ║
-║      0                                     S3 ─────┐ │       │ ┌───── GND                                     15      ║
-╚═══════════════════════════════════════════════════ █ █ █ █ █ █ █ ═════════════════════════════════════════════════════╝
-S1 ─────────┘  │ └───────── OUT
-S0 
+
+### How use SensorBar16
+1.- Import the library in your arduino project
+```
+#include <TapatioElecronics.h>
+```
+2.- Create an object to use
+```
+#include <TapatioElecronics.h>
+```
+3.- Call the methods you need
+```
+#include <TapatioElecronics.h>
+```
 
 ### Examples for SensorBar16
+
 
 * [Knob](https://www.arduino.cc/en/Tutorial/Knob): control the shaft of a servo motor by turning a potentiometer
 * [Sweep](https://www.arduino.cc/en/Tutorial/LibraryExamples/Sweep): sweeps the shaft of a servo motor back and forth
