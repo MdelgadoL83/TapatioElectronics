@@ -26,10 +26,13 @@ SensorBar16 sb(2,3,4,5,A0);
 ```
 sb.calibrate();
 int pos = sb.getPosition();
+...
 ```
 
 ### Examples for SensorBar16
 
 
-* [Analog Read](https://github.com/MdelgadoL83/TapatioElectronics/tree/main/examples/SensorBar16_AnalogRead): control the shaft of a servo motor by turning a potentiometer
-* [Digital Read](https://github.com/MdelgadoL83/TapatioElectronics/tree/main/examples/SensorBar16_DigitalRead): sweeps the shaft of a servo motor back and forth
+* [Analog Read](https://github.com/MdelgadoL83/TapatioElectronics/blob/main/examples/SensorBar16_AnalogRead/SensorBar16_AnalogRead.ino): Example showing the use of the sensor bar in an analog mode
+* [Digital Read](https://github.com/MdelgadoL83/TapatioElectronics/blob/main/examples/SensorBar16_DigitalRead/SensorBar16_DigitalRead.ino): Example showing the use of the sensor bar in an digital mode
+* [Single Sensor](https://github.com/MdelgadoL83/TapatioElectronics/blob/main/examples/SensorBar16_SingleVaue/SensorBar16_SingleVaue.ino): shows how to access each sensor separately
+* [get Position](https://github.com/MdelgadoL83/TapatioElectronics/blob/main/examples/SensorBar16_getPosition/SensorBar16_getPosition.ino): Example showing the operation for a line following robot
