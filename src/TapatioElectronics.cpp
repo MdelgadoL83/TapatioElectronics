@@ -24,6 +24,7 @@ SensorBar16::SensorBar16(int s0, int s1, int s2, int s3, int out){
 -------------------------------------------------------------------------------------------------
 */
 int SensorBar16::read(int x){
+  x=15-x;
   digitalWrite(s0,bitRead(x,0));
   digitalWrite(s1,bitRead(x,1));
   digitalWrite(s2,bitRead(x,2));
