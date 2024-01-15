@@ -29,7 +29,7 @@ Date:       April 2022
 */
 
 
-#include "SensorBar16.h"
+#include "TapatioElectronics.h"
 
 int sensors=16;
 SensorBar16 sb(2,3,4,5,A0);    //Create object to operate the SensorBar16
