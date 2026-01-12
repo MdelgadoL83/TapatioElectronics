@@ -1,5 +1,5 @@
 #######################################
-# Syntax Coloring Tapatio Sensor Bar
+# Syntax Coloring TapatioElectronics
 #######################################
 
 #######################################
@@ -7,18 +7,28 @@
 #######################################
 
 SensorBar16	KEYWORD1
+DriverTB6612	KEYWORD1
+DriverTapatio	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-calibrate         KEYWORD2
-getPosition       KEYWORD2
-analogValues      KEYWORD2
-digitalValues     KEYWORD2
-singleSensorRead  KEYWORD2
-getUmbral         KEYWORD2
-getValues         KEYWORD2
 
+# SensorBar16 Methods
+calibrate	KEYWORD2
+getPosition	KEYWORD2
+analogValues	KEYWORD2
+digitalValues	KEYWORD2
+singleSensorRead	KEYWORD2
+getUmbral	KEYWORD2
+getValues	KEYWORD2
+
+# DriverTB6612 Methods
+setVelocidad	KEYWORD2
+stop	KEYWORD2
+
+# Utility Functions
+SplashScreen	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
