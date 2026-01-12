@@ -32,10 +32,11 @@ int bin1 = 7; // BIN1 - Motor B Direction
 int bin2 = 6; // BIN2 - Motor B Direction
 int pwmb = 9; // PWM Motor B (Timer1)
 
-// Create driver instance
+//-----------------------------------DRIVER------------------------------------------
 DriverTB6612 motors(pwma, ain1, ain2, pwmb, bin1, bin2);
 
-// Test parameters
+
+//-----------------------------------VARS------------------------------------------
 #define SPEED 60
 #define FORWARD true // true = forward, false = backward
 

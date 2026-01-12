@@ -23,8 +23,7 @@
 #include <TapatioElectronics.h>
 #include <Wire.h>
 
-//-----------------------------------SCREEN
-// VARS---------------------------------------------------
+//-----------------------------------SCREEN VARS---------------------------------------------------
 #define SCREEN_WIDTH 128 // OLED display width, in pixels
 #define SCREEN_HEIGHT 32 // OLED display height, in pixels
 #define SCREEN_ADDRESS                                                         \
@@ -32,8 +31,7 @@
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire);
 String cad;
 
-//-----------------------------------POTS
-// & BUTTON VARS------------------------------------------
+//-----------------------------------POTS & BUTTON VARS------------------------------------------
 int pots[] = {A7, A6, A1, A0};
 #define boton 2
 
