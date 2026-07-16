@@ -96,9 +96,9 @@ float scale = 16.0f;
 int vel = 40;
 
 //-----------------------------------PID VARS------------------------------------------
-float kp = 0.3;
-float ki = 0.000001;
-float kd = 0.0;
+float kp = 0.70;
+float ki = 0.10;
+float kd = 0.02;
 float kf = 0.3f;   
 float P, I, D;
 float error = 0;
